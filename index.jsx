@@ -20,119 +20,84 @@ export function Board() {
 
     if (turns) {
       setTurns(false);
-    } else {
-      setTurns(true);
-    }
-
-    console.log(turns);
-
-    if (turns) {
       setXOr1("X");
     } else {
+      setTurns(true);
       setXOr1("O");
     }
+
   }
 
   function ChangeTurns2() {
 
     if (turns) {
       setTurns(false);
-    } else {
-      setTurns(true);
-    }
-
-    console.log(turns);
-
-    if (turns) {
       setXOr2("X");
     } else {
+      setTurns(true);
       setXOr2("O");
     }
+
   }
 
   function ChangeTurns3() {
 
     if (turns) {
       setTurns(false);
-    } else {
-      setTurns(true);
-    }
-
-    console.log(turns);
-
-    if (turns) {
       setXOr3("X");
     } else {
-      setXOr3("O");
+      setTurns(true);
+      setXOr3("O")
     }
+
   }
 
   function ChangeTurns4() {
 
     if (turns) {
       setTurns(false);
-    } else {
-      setTurns(true);
-    }
-
-    console.log(turns);
-
-    if (turns) {
       setXOr4("X");
     } else {
+      setTurns(true);
       setXOr4("O");
     }
+
   }
 
   function ChangeTurns5() {
 
     if (turns) {
       setTurns(false);
-    } else {
-      setTurns(true);
-    }
-
-    console.log(turns);
-
-    if (turns) {
       setXOr5("X");
     } else {
+      setTurns(true);
       setXOr5("O");
     }
+
   }
 
   function ChangeTurns6() {
 
     if (turns) {
       setTurns(false);
-    } else {
-      setTurns(true);
-    }
-
-    console.log(turns);
-
-    if (turns) {
       setXOr6("X");
     } else {
+      setTurns(true);
       setXOr6("O");
     }
+
   }
 
   function ChangeTurns7() {
 
     if (turns) {
       setTurns(false);
-    } else {
-      setTurns(true);
-    }
-
-    console.log(turns);
-
-    if (turns) {
       setXOr7("X");
     } else {
+      setTurns(true);
       setXOr7("O");
     }
+
   }
 
   function ChangeTurns8() {
@@ -153,17 +118,12 @@ export function Board() {
 
     if (turns) {
       setTurns(false);
-    } else {
-      setTurns(true);
-    }
-
-    console.log(turns);
-
-    if (turns) {
       setXOr9("X");
     } else {
+      setTurns(true);
       setXOr9("O");
     }
+
   }
 
   if (xOr1 == "X" && xOr2 == "X" && xOr3 == "X") {
@@ -209,6 +169,8 @@ export function Board() {
     endGame = true;
     subTitle = "Winner: O";
   }
+
+  // switch (xOr1 )
 
   if (xOr1 != "" && xOr2 != "" && xOr3 != "" && xOr4 != "" && xOr5 != "" && xOr6 != "" && xOr7 != "" && xOr8 != "" && xOr9 != "") {
   endGame = true;
