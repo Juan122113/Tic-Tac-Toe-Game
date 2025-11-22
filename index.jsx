@@ -2,7 +2,6 @@ const { useState } = React;
 
 export function Board() {
 
-  // const [xOr0, setXOr0] = useState("");
   const [xOr1, setXOr1] = useState("");
   const [xOr2, setXOr2] = useState("");
   const [xOr3, setXOr3] = useState("");
@@ -12,17 +11,13 @@ export function Board() {
   const [xOr7, setXOr7] = useState("");
   const [xOr8, setXOr8] = useState("");
   const [xOr9, setXOr9] = useState("");
-  const [subTitle, setSubTitle] = useState("");
   const [turns, setTurns] = useState(true); //true = X, false = 0
 
-  // let turns; //true = X, false = 0
+  let endGame = false;
+  let subTitle = "";
 
   function ChangeTurns1() {
-    // if (turns) {
-    //   turns = false;
-    // } else {
-    //   turns = true;
-    // }
+
     if (turns) {
       setTurns(false);
     } else {
@@ -34,15 +29,191 @@ export function Board() {
     if (turns) {
       setXOr1("X");
     } else {
-      setXOr1("0");
+      setXOr1("O");
     }
   }
 
-  // if (turns) {
-  //   setXOr0("X");
-  // } else {
-  //   setXOr0("0");
-  // }
+  function ChangeTurns2() {
+
+    if (turns) {
+      setTurns(false);
+    } else {
+      setTurns(true);
+    }
+
+    console.log(turns);
+
+    if (turns) {
+      setXOr2("X");
+    } else {
+      setXOr2("O");
+    }
+  }
+
+  function ChangeTurns3() {
+
+    if (turns) {
+      setTurns(false);
+    } else {
+      setTurns(true);
+    }
+
+    console.log(turns);
+
+    if (turns) {
+      setXOr3("X");
+    } else {
+      setXOr3("O");
+    }
+  }
+
+  function ChangeTurns4() {
+
+    if (turns) {
+      setTurns(false);
+    } else {
+      setTurns(true);
+    }
+
+    console.log(turns);
+
+    if (turns) {
+      setXOr4("X");
+    } else {
+      setXOr4("O");
+    }
+  }
+
+  function ChangeTurns5() {
+
+    if (turns) {
+      setTurns(false);
+    } else {
+      setTurns(true);
+    }
+
+    console.log(turns);
+
+    if (turns) {
+      setXOr5("X");
+    } else {
+      setXOr5("O");
+    }
+  }
+
+  function ChangeTurns6() {
+
+    if (turns) {
+      setTurns(false);
+    } else {
+      setTurns(true);
+    }
+
+    console.log(turns);
+
+    if (turns) {
+      setXOr6("X");
+    } else {
+      setXOr6("O");
+    }
+  }
+
+  function ChangeTurns7() {
+
+    if (turns) {
+      setTurns(false);
+    } else {
+      setTurns(true);
+    }
+
+    console.log(turns);
+
+    if (turns) {
+      setXOr7("X");
+    } else {
+      setXOr7("O");
+    }
+  }
+
+  function ChangeTurns8() {
+
+    if (turns) {
+      setTurns(false);
+      setXOr8("X");
+    } else {
+      setTurns(true);
+      setXOr8("O");
+    }
+
+    console.log(turns);
+
+  }
+
+  function ChangeTurns9() {
+
+    if (turns) {
+      setTurns(false);
+    } else {
+      setTurns(true);
+    }
+
+    console.log(turns);
+
+    if (turns) {
+      setXOr9("X");
+    } else {
+      setXOr9("O");
+    }
+  }
+
+  if (xOr1 == "X" && xOr2 == "X" && xOr3 == "X") {
+    endGame = true;
+    subTitle = "Winner: X";
+  } else if (xOr1 == "X" && xOr5 == "X" && xOr9 == "X") {
+    endGame = true;
+    subTitle = "Winner: X";
+  } else if (xOr1 == "X" && xOr4 == "X" && xOr7 == "X") {
+    endGame = true;
+    subTitle = "Winner: X";
+  } else if (xOr2 == "X" && xOr5 == "X" && xOr8 == "X") {
+    endGame = true;
+    subTitle = "Winner: X";
+  } else if (xOr3 == "X" && xOr6 == "X" && xOr9 == "X") {
+    endGame = true;
+    subTitle = "Winner: X";
+  } else if (xOr4 == "X" && xOr5 == "X" && xOr6 == "X") {
+    endGame = true;
+    subTitle = "Winner: X";
+  } else if (xOr7 == "X" && xOr8 == "X" && xOr9 == "X") {
+    endGame = true;
+    subTitle = "Winner: X";
+  } else if (xOr1 == "O" && xOr2 == "O" && xOr3 == "O") {
+    endGame = true;
+    subTitle = "Winner: O";
+  } else if (xOr1 == "O" && xOr5 == "O" && xOr9 == "O") {
+    endGame = true;
+    subTitle = "Winner: O";
+  } else if (xOr1 == "O" && xOr4 == "O" && xOr7 == "O") {
+    endGame = true;
+    subTitle = "Winner: O";
+  } else if (xOr2 == "O" && xOr5 == "O" && xOr8 == "O") {
+    endGame = true;
+    subTitle = "Winner: O";
+  } else if (xOr3 == "O" && xOr6 == "O" && xOr9 == "O") {
+    endGame = true;
+    subTitle = "Winner: O";
+  } else if (xOr4 == "O" && xOr5 == "O" && xOr6 == "O") {
+    endGame = true;
+    subTitle = "Winner: O";
+  } else if (xOr7 == "O" && xOr8 == "O" && xOr9 == "O") {
+    endGame = true;
+    subTitle = "Winner: O";
+  }
+
+  if (xOr1 != "" && xOr2 != "" && xOr3 != "" && xOr4 != "" && xOr5 != "" && xOr6 != "" && xOr7 != "" && xOr8 != "" && xOr9 != "") {
+  endGame = true;
+  subTitle = "Draw";
+  }
 
   function Reset() {
     setXOr1("");
@@ -63,17 +234,19 @@ export function Board() {
 
       <h2>{subTitle}</h2>
 
-      <div className="container">
-        <button className="square" name="button.square" id="button.square" onClick={ChangeTurns1} disabled={xOr1 == "" ? false : true } >{xOr1}</button>
-        <button className="square" name="button.square" id="button.square">{xOr2}</button>
-        <button className="square" name="button.square" id="button.square">{xOr3}</button>
-        <button className="square" name="button.square" id="button.square">{xOr4}</button>
-        <button className="square" name="button.square" id="button.square">{xOr5}</button>
-        <button className="square" name="button.square" id="button.square">{xOr6}</button>
-        <button className="square" name="button.square" id="button.square">{xOr7}</button>
-        <button className="square" name="button.square" id="button.square">{xOr8}</button>
-        <button className="square" name="button.square" id="button.square">{xOr9}</button>
-      </div>
+      <fieldset className="container" disabled={endGame ? true : false}>
+
+        <button className="square" name="button.square" id="button.square" onClick={ChangeTurns1} disabled={xOr1 == ""? false : true } >{xOr1}</button>
+        <button className="square" name="button.square" id="button.square" onClick={ChangeTurns2} disabled={xOr2 == "" ? false : true } >{xOr2}</button>
+        <button className="square" name="button.square" id="button.square" onClick={ChangeTurns3} disabled={xOr3 == "" ? false : true } >{xOr3}</button>
+        <button className="square" name="button.square" id="button.square" onClick={ChangeTurns4} disabled={xOr4 == "" ? false : true } >{xOr4}</button>
+        <button className="square" name="button.square" id="button.square" onClick={ChangeTurns5} disabled={xOr5 == "" ? false : true } >{xOr5}</button>
+        <button className="square" name="button.square" id="button.square" onClick={ChangeTurns6} disabled={xOr6 == "" ? false : true } >{xOr6}</button>
+        <button className="square" name="button.square" id="button.square" onClick={ChangeTurns7} disabled={xOr7 == "" ? false : true } >{xOr7}</button>
+        <button className="square" name="button.square" id="button.square" onClick={ChangeTurns8} disabled={xOr8 == "" ? false : true } >{xOr8}</button>
+        <button className="square" name="button.square" id="button.square" onClick={ChangeTurns9} disabled={xOr9 == "" ? false : true } >{xOr9}</button>
+
+      </fieldset>
 
       {/* <button.square></button.square> */}
 
