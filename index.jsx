@@ -170,8 +170,6 @@ export function Board() {
     subTitle = "Winner: O";
   }
 
-  // switch (xOr1 )
-
   if (xOr1 != "" && xOr2 != "" && xOr3 != "" && xOr4 != "" && xOr5 != "" && xOr6 != "" && xOr7 != "" && xOr8 != "" && xOr9 != "") {
   endGame = true;
   subTitle = "Draw";
@@ -209,8 +207,6 @@ export function Board() {
         <button className="square" name="button.square" id="button.square" onClick={ChangeTurns9} disabled={xOr9 == "" ? false : true } >{xOr9}</button>
 
       </fieldset>
-
-      {/* <button.square></button.square> */}
 
       <button id="reset" onClick={Reset}>Reset game</button>
     </div>
